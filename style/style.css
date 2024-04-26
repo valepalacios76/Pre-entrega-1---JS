@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&display=swap');
+
+/* Paleta de colores 
+FUCSIA: #f60069
+ROSA VIEJO: #e87171
+ROSA CLARO: #ffc7b6
+*/
+
+/* reset */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: "Outfit", sans-serif;
+    background-color: #e87171;
+}
+
+
+/* BARRA DE NAVEGACIÓN */
+.barra{
+    width: 100%;
+    background-color: #e87171;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    position:sticky;
+}
+
+.barra a img{
+    width: 60px;
+    margin: 10px 10px 10px 20px;
+}
+
+.barra-paginas{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    list-style: none;
+}
+
+.barra-paginas li a{
+    font-size: 1rem;
+    text-decoration: none;
+    margin: 0 30px;
+    color: #ffc7b6;
+    font-weight: 600;
+}
+
+
+/* HOME */
+/* SECCIÓN 1 */
+.seccion1{
+    width: 100%;
+    height: 700px;
+    background-image: url(../media/fondo-seccion1.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: start;
+    color: #ffc7b6;
+}
+
+.seccion1 h1{
+    width: 50%;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+    padding-top: 120px;
+
+}
+
+.seccion1 h1 span{
+    display: block;
+    font-weight: 800;
+}
+
+.seccion1 h3{
+    font-size: 1.3rem;
+    width: 50%;
+    text-align: center;
+    font-weight: 300;
+
+}
+
+/* SECCION 2 */
+.seccion2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+}
+
+.seccion2 h2{
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 0 20px 0;
+}
+
+.cardsProds{
+    display: flex;
+    flex-direction: row;
+}
+
+.fotoProd{
+    width: 170px;
+}
+
+.linkBtn{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.btnCompra1{
+    background-color: black;
+    border: none;
+}
+
+.btnCompra1:hover{
+    background-color:#f60069;
+    border: none;
+}
+
+
+/* SECCION 3 */
+.seccion3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffc7b6;
+    border-radius: 32px 31px 0px 0px;
+    -webkit-border-radius: 32px 31px 0px 0px;
+    -moz-border-radius: 32px 31px 0px 0px;
+}
+
+.seccion3 h2{
+    color: black;
+    font-size: 1.5rem;
+
+}
+
+
+/* SHOP */
+
+.bodyCart{
+    background-color:#ffc7b6;
+
+}
+
+.tituloShop{
+    text-align: center;
+    color:black;
+    font-family: "Outfit", sans-serif;
+    font-size: 1.5rem;
+    padding-top: 40px;
+    font-weight: 800;
+}
+
+.mainShop section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjetas{
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    justify-items: center;
+}
+
+.tarjeta{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 50px;
+    border-radius: 15px;
+    height: 320px;
+    font-family: "Outfit", sans-serif;
+    font-size: 0.9rem;
+}
+
+.tituloCarta{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.btnCompra{
+    border: none;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.btnCompra:hover{
+    background-color:#f60069;
+}
+
+.alinearTarj{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.svg{
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 60px;
+}
+
+.tituloCarrito{
+    font-size: 1.5rem;
+    font-family: "Outfit", sans-serif;
+    text-align: center;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.tablaGral{
+    font-family: "Outfit", sans-serif;
+    font-size: 1rem;
+    width: 80%;
+}
+
+#total{
+    font-size: 1.2rem;
+    font-family: "Outfit", sans-serif;
+    text-align: center;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+#btnBorrar{
+    margin-bottom: 30px;
+}
+
+/* FOOTER */
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e87171;
+}
+
+footer p{
+    color: white;
+    font-size: 0.9rem;
+    margin: 0
+}
+
+footer svg{
+    width: 30px;
+}
