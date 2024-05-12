@@ -126,6 +126,10 @@ body{
     border: none;
 }
 
+.btnCompra1 a{
+    text-decoration: none;
+    color: white;
+}
 
 /* SECCION 3 */
 .seccion3{

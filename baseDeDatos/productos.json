@@ -1,0 +1,75 @@
+
+[
+    {
+        "id": 1,
+        "foto": "../media/labialRojo.JPG",
+        "color": "Red Lipstick",
+        "precio": 1500,
+        "marca": "Loreal"
+    },
+
+    {
+        "id": 2,
+        "foto": "../media/labialNude.JPG",
+        "color": "Nude Lipstick",
+        "precio": 1400,
+        "marca": "Maybelline"
+    },
+
+    {
+        "id": 3,
+        "foto": "../media/labialMorado.JPG",
+        "color": "Dark Purple Lipstick",
+        "precio": 1600,
+        "marca": "Loreal"
+    },
+
+    {
+        "id": 4,
+        "foto": "../media/baseClara.JPG",
+        "color": "Light Foundation",
+        "precio": 2500,
+        "marca": "Natura"
+    },
+
+    {
+        "id": 5,
+        "foto": "../media/baseMedia.JPG",
+        "color": "Medium Foundation",
+        "precio": 2500,
+        "marca": "Maybelline"
+    },
+
+    {
+        "id": 6,
+        "foto": "../media/baseOscura.JPG",
+        "color": "Dark Foundation",
+        "precio": 2500,
+        "marca": "Avon"
+    },
+
+    {
+        "id": 7,
+        "foto": "../media/paletaCalida.JPG",
+        "color": "Warm Palette",
+        "precio": 3800,
+        "marca": "Avon"
+    },
+
+    {
+        "id": 8,
+        "foto": "../media/paletaNeutra.JPG",
+        "color": "Neutral Palette",
+        "precio": 3500,
+        "marca": "Natura"
+    },
+
+
+    {
+        "id": 9,
+        "foto": "../media/paletaFria.JPG",
+        "color": "Cold Palette",
+        "precio": 3800,
+        "marca": "Loreal"
+    }
+]

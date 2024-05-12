@@ -1,12 +1,36 @@
+// VARIABLES Y CONSTANTES necesarias para la ejecución del código
 const contenedorShop = document.getElementById("productosShop");
 const tablaBody = document.getElementById("tablabody")
 const carrito = [];
+const urlJSON = "baseDeDatos/productos.json"
 let totalCarrito = JSON.parse(localStorage.getItem('TotalCarrito')) || 0;
+
+
 
 window.onload = function() {
     mostrarProductosEnCarrito();
 };
 
+
+
+// FUNCIONES
+
+// Función para traer y convertir JSON
+async function TraerJSON(url){
+    try{
+        // Traer JSON y guardarlo en una constante
+        const solicitud = await fetch(url)
+        // Convertir json para poder utilizarlo
+        const datos = await solicitud.json()
+        return datos;
+    }
+    // "atrapando" el error
+    catch (error){
+        console.error("Error: " + error);
+    }
+}
+
+// Función para imprimir productos agregados al carrito en una tabla en el DOM 
 function mostrarProductosEnCarrito() {
     const carritoGuardado = JSON.parse(localStorage.getItem('Carrito')) || [];
     for (const producto of carritoGuardado) {
@@ -20,6 +44,8 @@ function mostrarProductosEnCarrito() {
     }
 }
 
+
+// Función para crear e inyectar tarjetas de productos en el DOM
 function mostrarProductos(listaProductos){
     for(const prod of listaProductos){
         contenedorShop.innerHTML += `
@@ -34,6 +60,7 @@ function mostrarProductos(listaProductos){
         `
     }
 
+// Botón para comprar
     const botonesCompra = document.getElementsByClassName("btnCompra")
 
     for (const btn of botonesCompra){
@@ -47,8 +74,13 @@ function mostrarProductos(listaProductos){
 
 }
 
-mostrarProductos(productosArray);
+// Utilizando JSON convertido en un array de objetos para usarlo como parámetro de la función mostrarProductos()
+TraerJSON(urlJSON)
+    .then((datos) => {
+        mostrarProductos(datos);
+    })
 
+// Función que pushea cada producto hacia la tabla (carrito) de compras
 function agregarACarrito(producto){
     carrito.push(producto);
     tablaBody.innerHTML += `
@@ -61,6 +93,7 @@ function agregarACarrito(producto){
     guardarCarrito()
 }
 
+// Función para sumar el precio final de los productos
 function sumarCarrito(producto){
     const total = document.getElementById("total");
     totalCarrito += producto.precio
@@ -68,15 +101,18 @@ function sumarCarrito(producto){
 }
 
 
-// Utilización de Storage
+//STORAGE
 
+// Función que guarda en el local Storage el carrito para poder conservarlo al recargar la página
 function guardarCarrito() {
     localStorage.setItem('Carrito', JSON.stringify(carrito));
 }
 
+// Botón para borrar el carrito
 const boton = document.getElementById("btnBorrar");
 boton.addEventListener("click", borrarTabla);
 
+// Función para vacíar la tabla en caso de haberte confundido al cargar los productos (también resetea el total de los productos sumados)
 function borrarTabla(){
     tablaBody.innerHTML = "";
     totalCarrito = 0;
@@ -85,4 +121,3 @@ function borrarTabla(){
     const total = document.getElementById("total");
     total.innerText = "Total to pay: $" + totalCarrito;
 }
-
