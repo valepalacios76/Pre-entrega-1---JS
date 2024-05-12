@@ -2,7 +2,7 @@
 const contenedorShop = document.getElementById("productosShop");
 const tablaBody = document.getElementById("tablabody")
 const carrito = [];
-const urlJSON = "./baseDeDatos/productos.json"
+const urlJSON = "../baseDeDatos/productos.json"
 let totalCarrito = JSON.parse(localStorage.getItem('TotalCarrito')) || 0;
 
 
