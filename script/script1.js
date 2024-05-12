@@ -20,6 +20,8 @@ async function TraerJSON(url){
 
 // Función para mostrar las cards de productos
 function mostrarProductos(listaProductos){
+    console.log(listaProductos)
+    
     const productosMasComprados = listaProductos.filter((prod) => idsProductos.includes(prod.id))
 
     productosMasComprados.forEach((prod) => {

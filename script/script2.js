@@ -47,6 +47,9 @@ function mostrarProductosEnCarrito() {
 
 // Función para crear e inyectar tarjetas de productos en el DOM
 function mostrarProductos(listaProductos){
+    console.log(listaProductos
+        
+    )
     for(const prod of listaProductos){
         contenedorShop.innerHTML += `
         <div class="card tarjeta" style="width: 12rem;">
