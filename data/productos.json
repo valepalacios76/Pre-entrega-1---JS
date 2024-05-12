@@ -2,7 +2,7 @@
 [
     {
         "id": 1,
-        "foto": "./media/labialRojo.JPG",
+        "foto": "media/labialRojo.JPG",
         "color": "Red Lipstick",
         "precio": 1500,
         "marca": "Loreal"

@@ -2,7 +2,7 @@
 const contenedorShop = document.getElementById("productosShop");
 const tablaBody = document.getElementById("tablabody")
 const carrito = [];
-let urlJSON = "./data/productos.json"
+let urlJSON = "../data/productos.json"
 let totalCarrito = JSON.parse(localStorage.getItem('TotalCarrito')) || 0;
 
 
@@ -75,7 +75,7 @@ function mostrarProductos(listaProductos){
 }
 
 // Utilizando JSON convertido en un array de objetos para usarlo como parámetro de la función mostrarProductos()
-TraerJSON("./baseDeDatos/productos.json")
+TraerJSON(urlJSON)
     .then((datos) => {
         mostrarProductos(datos);
     })
