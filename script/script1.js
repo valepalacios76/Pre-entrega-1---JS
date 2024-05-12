@@ -1,6 +1,6 @@
 const contenedorProds = document.getElementById("productos");
 let carrito = []
-const urlJSON = "./baseDeDatos/productos.json"
+let urlJSON = "./data/productos.json"
 const idsProductos = [1, 4, 7];
 
 async function TraerJSON(url){
@@ -29,14 +29,14 @@ function mostrarProductos(listaProductos){
             <div class="card-body alinearTarj">
                 <h5 class="card-title tituloCarta">${prod.color}</h5>
                 <p class="card-text">Price: $${prod.precio}</p>
-                <button class="btn btn-primary btnCompra1 linkBtn" id="${prod.id}"><a href="./pages/shop.html">SHOP</a></button>
+                <button class="btn btn-primary btnCompra1 linkBtn" id="${prod.id}"><a href="shop.html">SHOP</a></button>
             </div>
         </div>
         `
     })
 }
 
-TraerJSON(urlJSON)
+TraerJSON("./baseDeDatos/productos.json")
     .then((datos) => {
         mostrarProductos(datos);
     })
