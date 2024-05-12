@@ -48,7 +48,7 @@ function mostrarProductosEnCarrito() {
 // Función para crear e inyectar tarjetas de productos en el DOM
 function mostrarProductos(listaProductos){
     console.log(listaProductos
-        
+
     )
     for(const prod of listaProductos){
         contenedorShop.innerHTML += `
@@ -86,6 +86,17 @@ TraerJSON(urlJSON)
 // Función que pushea cada producto hacia la tabla (carrito) de compras
 function agregarACarrito(producto){
     carrito.push(producto);
+    // uso de sweet alert
+    Swal.fire({
+        title: `Congratulations!`,
+        text: `You added: ${producto.color} to the cart 🛒`,
+        imageUrl: `.${producto.foto}`,
+        imageWidth: 150,
+        imageHeight: 150,
+        imageAlt: `${producto.color}`,
+        confirmButtonColor: "#e87171"
+      });
+
     tablaBody.innerHTML += `
     <tr>
         <td>${producto.id}</td>
