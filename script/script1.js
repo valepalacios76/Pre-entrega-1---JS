@@ -1,6 +1,6 @@
 const contenedorProds = document.getElementById("productos");
 let carrito = []
-const urlJSON = "baseDeDatos/productos.json"
+const urlJSON = "./baseDeDatos/productos.json"
 const idsProductos = [1, 4, 7];
 
 async function TraerJSON(url){
